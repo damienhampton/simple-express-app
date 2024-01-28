@@ -2,7 +2,7 @@ const express = require('express');
 const Redis = require('ioredis');
 const app = express();
 
-const redis = new Redis(6379, "redis-staging")
+const redis = new Redis(6379, "gsh-redis-staging")
 
 app.get('/env', (req, res) => {
     res.json({ environment: process.env });
